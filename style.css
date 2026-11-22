@@ -1,0 +1,392 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f9ff;
+  color: #333;
+  text-align: center;
+  transition: background 0.5s;
+}
+
+header {
+  background: #dff4e5;
+  padding: 20px;
+}
+
+header h1 {
+  font-size: 35px;
+  margin: 5px;
+  color: #287b53;
+}
+
+header p {
+  font-size: 20px;
+  margin: 8px;
+}
+
+main {
+  max-width: 750px;
+  margin: auto;
+  padding: 20px;
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 25px;
+}
+
+p {
+  font-size: 20px;
+}
+
+.screen {
+  display: none;
+}
+
+.screen.active {
+  display: block;
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+button {
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: bold;
+  transition: transform 0.15s, background 0.2s;
+}
+
+button:hover {
+  transform: scale(1.03);
+}
+
+button:focus-visible {
+  outline: 4px solid #333;
+  outline-offset: 3px;
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+.menu-btn {
+  min-height: 145px;
+  font-size: 25px;
+  padding: 20px;
+}
+
+.blue {
+  background: #d5e8ff;
+}
+
+.yellow {
+  background: #fff0bd;
+}
+
+.pink {
+  background: #ffdfeb;
+}
+
+.purple {
+  background: #e4d9ff;
+}
+
+.green {
+  background: #d7f3df;
+}
+
+.orange {
+  background: #ffe1bd;
+}
+
+.wide {
+  grid-column: 1 / -1;
+  min-height: 110px;
+}
+
+.choices {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.choices button {
+  background: white;
+  border: 3px solid #e1eaf2;
+  min-height: 130px;
+  padding: 15px;
+  font-size: 22px;
+}
+
+.choices button:active {
+  background: #dff4e5;
+}
+
+.home-btn {
+  margin-top: 25px;
+  background: #dff4e5;
+  padding: 20px;
+  width: 100%;
+  font-size: 23px;
+}
+
+.subtitle {
+  margin-bottom: 25px;
+}
+
+/* PLAY MENU */
+
+.play-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.play-card {
+  min-height: 180px;
+  border-radius: 25px;
+  font-size: 26px;
+  padding: 20px;
+}
+
+.rainbow {
+  background: #ffdce5;
+}
+
+.animal {
+  background: #dff4e5;
+}
+
+.bubbles {
+  background: #d9edff;
+}
+
+.stars {
+  background: #fff1c9;
+}
+
+/* RAINBOW */
+
+.rainbow-box {
+  background: white;
+  border-radius: 30px;
+  min-height: 250px;
+  font-size: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  transition: background 0.5s;
+}
+
+.magic-btn {
+  background: #ffe1bd;
+  width: 100%;
+  padding: 25px;
+  font-size: 25px;
+  margin-top: 10px;
+}
+
+.rainbow-animation {
+  animation: rainbowPop 0.8s ease;
+}
+
+@keyframes rainbowPop {
+  0% {
+    transform: scale(0.6) rotate(-10deg);
+  }
+
+  50% {
+    transform: scale(1.2) rotate(10deg);
+  }
+
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+/* ANIMALS */
+
+.animal-choices button {
+  background: #e8f8ed;
+}
+
+/* BUBBLES */
+
+.bubble-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  padding: 20px 5px;
+}
+
+.bubble {
+  background: #d9edff;
+  border-radius: 50%;
+  font-size: 45px;
+  min-height: 100px;
+  min-width: 100px;
+  animation: floatBubble 2s infinite alternate ease-in-out;
+}
+
+.bubble:nth-child(even) {
+  animation-delay: 0.5s;
+}
+
+@keyframes floatBubble {
+  from {
+    transform: translateY(5px);
+  }
+
+  to {
+    transform: translateY(-12px);
+  }
+}
+
+.bubble.pop {
+  animation: popAnimation 0.3s forwards;
+}
+
+@keyframes popAnimation {
+  to {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+/* STARS */
+
+.star-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.magic-star {
+  background: #fff1c9;
+  min-height: 110px;
+  border-radius: 25px;
+  font-size: 55px;
+}
+
+.magic-star.collected {
+  animation: starPop 0.5s forwards;
+}
+
+@keyframes starPop {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.6) rotate(20deg);
+  }
+
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+/* CALM CORNER */
+
+.calm {
+  background: #e6f5ec;
+  border-radius: 25px;
+  padding: 25px;
+}
+
+.calm p {
+  font-size: 25px;
+}
+
+.calm button {
+  display: block;
+  width: 100%;
+  margin: 12px auto;
+  padding: 20px;
+  background: white;
+  font-size: 20px;
+}
+
+.calm-emoji {
+  font-size: 90px;
+  margin: 20px;
+}
+
+.breathing {
+  animation: breatheAnimation 4s infinite alternate ease-in-out;
+}
+
+@keyframes breatheAnimation {
+  from {
+    transform: scale(0.8);
+  }
+
+  to {
+    transform: scale(1.3);
+  }
+}
+
+footer {
+  padding: 20px;
+  font-size: 18px;
+}
+
+/* SMALL SCREENS */
+
+@media (max-width: 480px) {
+  main {
+    padding: 12px;
+  }
+
+  header h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .menu-btn {
+    min-height: 120px;
+    font-size: 22px;
+  }
+
+  .choices button {
+    min-height: 110px;
+    font-size: 20px;
+  }
+
+  .play-card {
+    min-height: 140px;
+    font-size: 23px;
+  }
+
+  .bubble {
+    min-height: 75px;
+    min-width: 75px;
+    font-size: 35px;
+  }
+
+  .magic-star {
+    min-height: 85px;
+    font-size: 40px;
+  }
+
+  .rainbow-box {
+    min-height: 180px;
+    font-size: 100px;
+  }
+}

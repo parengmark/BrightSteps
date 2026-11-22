@@ -1,0 +1,290 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BrightSteps</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>🌈 BrightSteps</h1>
+    <p>Let's talk, learn, and play!</p>
+  </header>
+
+  <main>
+
+    <!-- HOME -->
+    <section id="home" class="screen active">
+      <h2>What do you want to do?</h2>
+
+      <div class="menu">
+
+        <button class="menu-btn blue" onclick="openScreen('want')">
+          🧸<br>I WANT
+        </button>
+
+        <button class="menu-btn yellow" onclick="openScreen('feel')">
+          😊<br>I FEEL
+        </button>
+
+        <button class="menu-btn pink" onclick="openScreen('mommy')">
+          👩‍👧<br>MOMMY
+        </button>
+
+        <button class="menu-btn purple" onclick="openScreen('teacher')">
+          👩‍🏫<br>TEACHER
+        </button>
+
+        <button class="menu-btn orange wide" onclick="openScreen('play')">
+          🎮<br>LET'S PLAY!
+        </button>
+
+        <button class="menu-btn green wide" onclick="openScreen('break')">
+          🌿<br>I NEED A BREAK
+        </button>
+
+      </div>
+    </section>
+
+    <!-- I WANT -->
+    <section id="want" class="screen">
+      <h2>🧸 I WANT</h2>
+
+      <div class="choices">
+        <button onclick="speak('I want water')">💧<br>Water</button>
+        <button onclick="speak('I want food')">🍎<br>Food</button>
+        <button onclick="speak('I want a toy')">🧸<br>Toy</button>
+        <button onclick="speak('I want to play')">⚽<br>Play</button>
+        <button onclick="speak('I need help')">🙋<br>Help</button>
+        <button onclick="speak('I want to go to the bathroom')">🚽<br>Bathroom</button>
+        <button onclick="speak('I want to rest')">😴<br>Rest</button>
+        <button onclick="speak('I want music')">🎵<br>Music</button>
+      </div>
+
+      <button class="home-btn" onclick="goHome()">🏠 HOME</button>
+    </section>
+
+    <!-- FEELINGS -->
+    <section id="feel" class="screen">
+      <h2>😊 I FEEL</h2>
+
+      <div class="choices">
+        <button onclick="speak('I am happy')">😄<br>Happy</button>
+        <button onclick="speak('I am sad')">😢<br>Sad</button>
+        <button onclick="speak('I am angry')">😡<br>Angry</button>
+        <button onclick="speak('I am scared')">😨<br>Scared</button>
+        <button onclick="speak('I am tired')">😴<br>Tired</button>
+        <button onclick="speak('I feel okay')">🙂<br>Okay</button>
+        <button onclick="speak('I am excited')">🤩<br>Excited</button>
+        <button onclick="speak('I feel sick')">🤒<br>Sick</button>
+      </div>
+
+      <button class="home-btn" onclick="goHome()">🏠 HOME</button>
+    </section>
+
+    <!-- MOMMY -->
+    <section id="mommy" class="screen">
+      <h2>👩‍👧 MOMMY</h2>
+
+      <div class="choices">
+        <button onclick="speak('Mommy, help me')">🙋<br>Help me</button>
+        <button onclick="speak('Mommy, I am hungry')">🍎<br>I'm hungry</button>
+        <button onclick="speak('Mommy, I am thirsty')">💧<br>I'm thirsty</button>
+        <button onclick="speak('Mommy, I want a hug')">🤗<br>Hug please</button>
+        <button onclick="speak('Mommy, I am tired')">😴<br>I'm tired</button>
+        <button onclick="speak('Mommy, I love you')">❤️<br>I love you</button>
+        <button onclick="speak('Mommy, I want to play')">⚽<br>Let's play</button>
+        <button onclick="speak('Mommy, I need a break')">🌿<br>Break please</button>
+      </div>
+
+      <button class="home-btn" onclick="goHome()">🏠 HOME</button>
+    </section>
+
+    <!-- TEACHER -->
+    <section id="teacher" class="screen">
+      <h2>👩‍🏫 TEACHER</h2>
+
+      <div class="choices">
+        <button onclick="speak('Teacher, help me')">🙋<br>Help me</button>
+        <button onclick="speak('I do not understand')">❓<br>I don't understand</button>
+        <button onclick="speak('I want to play')">⚽<br>I want to play</button>
+        <button onclick="speak('I need a break')">🌿<br>I need a break</button>
+        <button onclick="speak('I need the bathroom')">🚽<br>Bathroom</button>
+        <button onclick="speak('Please repeat')">🔁<br>Repeat please</button>
+        <button onclick="speak('I am finished')">✅<br>I'm finished</button>
+        <button onclick="speak('I feel sad')">😢<br>I feel sad</button>
+      </div>
+
+      <button class="home-btn" onclick="goHome()">🏠 HOME</button>
+    </section>
+
+    <!-- PLAY -->
+    <section id="play" class="screen">
+      <h2>🎮 LET'S PLAY!</h2>
+      <p class="subtitle">Choose a fun game!</p>
+
+      <div class="play-grid">
+
+        <button class="play-card rainbow" onclick="openScreen('rainbowGame')">
+          🌈<br>Rainbow Magic
+        </button>
+
+        <button class="play-card animal" onclick="openScreen('animalGame')">
+          🐶<br>Animal Sounds
+        </button>
+
+        <button class="play-card bubbles" onclick="openScreen('bubbleGame')">
+          🫧<br>Bubble Pop
+        </button>
+
+        <button class="play-card stars" onclick="openScreen('starGame')">
+          ⭐<br>Magic Stars
+        </button>
+
+      </div>
+
+      <button class="home-btn" onclick="goHome()">🏠 HOME</button>
+    </section>
+
+    <!-- RAINBOW GAME -->
+    <section id="rainbowGame" class="screen">
+      <h2>🌈 RAINBOW MAGIC</h2>
+      <p>Tap the rainbow!</p>
+
+      <div class="rainbow-box" id="rainbowBox">
+        🌈
+      </div>
+
+      <button class="magic-btn" onclick="makeRainbow()">✨ MAGIC!</button>
+
+      <button class="home-btn" onclick="openScreen('play')">
+        ⬅️ BACK TO PLAY
+      </button>
+    </section>
+
+    <!-- ANIMAL GAME -->
+    <section id="animalGame" class="screen">
+      <h2>🐶 ANIMAL SOUNDS</h2>
+      <p>Tap an animal!</p>
+
+      <div class="choices animal-choices">
+
+        <button onclick="animalSound('Dog! Woof woof!')">
+          🐶<br>Dog
+        </button>
+
+        <button onclick="animalSound('Cat! Meow!')">
+          🐱<br>Cat
+        </button>
+
+        <button onclick="animalSound('Cow! Moo!')">
+          🐮<br>Cow
+        </button>
+
+        <button onclick="animalSound('Duck! Quack quack!')">
+          🦆<br>Duck
+        </button>
+
+        <button onclick="animalSound('Lion! Roar!')">
+          🦁<br>Lion
+        </button>
+
+        <button onclick="animalSound('Bird! Tweet tweet!')">
+          🐦<br>Bird
+        </button>
+
+        <button onclick="animalSound('Pig! Oink oink!')">
+          🐷<br>Pig
+        </button>
+
+        <button onclick="animalSound('Frog! Ribbit!')">
+          🐸<br>Frog
+        </button>
+
+      </div>
+
+      <button class="home-btn" onclick="openScreen('play')">
+        ⬅️ BACK TO PLAY
+      </button>
+    </section>
+
+    <!-- BUBBLE GAME -->
+    <section id="bubbleGame" class="screen">
+      <h2>🫧 BUBBLE POP!</h2>
+      <p>Tap the bubbles!</p>
+
+      <div class="bubble-container" id="bubbleContainer">
+        <button class="bubble" onclick="popBubble(this)">🫧</button>
+        <button class="bubble" onclick="popBubble(this)">🫧</button>
+        <button class="bubble" onclick="popBubble(this)">🫧</button>
+        <button class="bubble" onclick="popBubble(this)">🫧</button>
+        <button class="bubble" onclick="popBubble(this)">🫧</button>
+        <button class="bubble" onclick="popBubble(this)">🫧</button>
+        <button class="bubble" onclick="popBubble(this)">🫧</button>
+        <button class="bubble" onclick="popBubble(this)">🫧</button>
+        <button class="bubble" onclick="popBubble(this)">🫧</button>
+      </div>
+
+      <button class="home-btn" onclick="openScreen('play')">
+        ⬅️ BACK TO PLAY
+      </button>
+    </section>
+
+    <!-- STAR GAME -->
+    <section id="starGame" class="screen">
+      <h2>⭐ MAGIC STARS</h2>
+      <p>Tap the stars!</p>
+
+      <div class="star-container">
+        <button class="magic-star" onclick="collectStar(this)">⭐</button>
+        <button class="magic-star" onclick="collectStar(this)">🌟</button>
+        <button class="magic-star" onclick="collectStar(this)">✨</button>
+        <button class="magic-star" onclick="collectStar(this)">⭐</button>
+        <button class="magic-star" onclick="collectStar(this)">🌟</button>
+        <button class="magic-star" onclick="collectStar(this)">✨</button>
+      </div>
+
+      <p id="starMessage">You are amazing! 💛</p>
+
+      <button class="home-btn" onclick="openScreen('play')">
+        ⬅️ BACK TO PLAY
+      </button>
+    </section>
+
+    <!-- BREAK -->
+    <section id="break" class="screen">
+      <h2>🌿 I NEED A BREAK</h2>
+
+      <div class="calm">
+        <div class="calm-emoji" id="calmEmoji">🌸</div>
+
+        <p id="breathingText">Let's breathe slowly.</p>
+
+        <button onclick="breathe()">🌬️ BREATHE</button>
+
+        <button onclick="speak('I want quiet')">
+          🤫 I WANT QUIET
+        </button>
+
+        <button onclick="speak('I want to rest')">
+          😴 I WANT TO REST
+        </button>
+      </div>
+
+      <button class="home-btn" onclick="goHome()">🏠 HOME</button>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>💛 You can communicate in your own way.</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
